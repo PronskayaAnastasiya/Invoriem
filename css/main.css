@@ -1,0 +1,55 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans&display=swap');
+/*font-family: 'Work Sans', sans-serif;*/
+/*font-family: 'Gilroy', sans-serif;*/
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 500;
+}
+
+.cotainer {
+    max-width: 1750px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/*Button*/
+.btn {
+    color: #114455;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #114455;
+    border-radius: 2px;
+    padding: 10px 24px;
+    display: inline-block;
+}
+
+/*Header*/
+.header {
+    min-height: 100vh;
+    background-image: url(./../img/header/header-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.header__top {
+    padding: 44px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    column-gap: 118px;
+}
+
+.link {
+    color: #114455;
+    font-size: 20px;
+    font-weight: bold;
+}
