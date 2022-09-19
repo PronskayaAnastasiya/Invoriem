@@ -1,32 +1,92 @@
 @import "./reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans&display=swap');
+@import "./fonts/Gilroy/stylesheet.css";
 /*font-family: 'Work Sans', sans-serif;*/
 /*font-family: 'Gilroy', sans-serif;*/
 
 body {
     font-family: 'Gilroy', sans-serif;
-    font-size: 500;
+    font-weight: 500;
 }
 
-.cotainer {
+.container {
     max-width: 1750px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
+.container-right {}
+
+
 /*Button*/
 .btn {
-    color: #114455;
-    font-size: 20px;
-    font-weight: bold;
+    position: relative;
+
     border: 1px solid #114455;
     border-radius: 2px;
+
     padding: 10px 24px;
     display: inline-block;
+    padding-right: 72px;
+
+    color: #114455;
+    font-size: 20px;
+    font-weight: 800;
+
+    transition: color 0.15s ease-in, backgound-color 0.15s ease-in;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    /*background-color: red;*/
+    background-image: url(./../img/icons/arrow-right-black.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #114455;
+    color: white;
+}
+
+.btn:hover::after {
+    background-image: url(./../img/icons/arrow-right-wight.svg);
+}
+
+.btn:active {
+    top: 1px;
+}
+
+.btn__big {
+    padding: 14px 32px;
+    padding-right: 80px;
+}
+
+.btn__dark {
+    background-color: #114455;
+    color: white;
+}
+
+.btn__dark::after {
+    background-image: url(./../img/icons/arrow-right-wight.svg);
+}
+
+.btn__dark:hover,
+.btn__dark:focus {
+    background-color: #0a1f26;
 }
 
 /*Header*/
 .header {
+    position: relative;
     min-height: 100vh;
     background-image: url(./../img/header/header-bg.jpg);
     background-size: cover;
@@ -35,8 +95,10 @@ body {
 
 .header__top {
     padding: 44px 0;
+    margin-bottom: 126px;
 }
 
+/*Nav*/
 .nav {
     display: flex;
     justify-content: space-between;
@@ -51,5 +113,66 @@ body {
 .link {
     color: #114455;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
+}
+
+/*Header content*/
+.header__content {
+    max-width: 1060px;
+}
+
+.header__title {
+    max-width: 734px;
+    font-weight: 800;
+    color: #114455;
+    margin-bottom: 48px;
+    font-size: 80px;
+}
+
+.header__text {
+    margin-bottom: 72px;
+    font-size: 34px;
+    color: rgb(50, 50, 50);
+}
+
+.header__text p+p {
+    margin-top: 1rem;
+}
+
+.none {
+    display: none;
+}
+
+
+/*Case Studies*/
+
+
+.case-studies {
+    padding-top: 184px;
+    padding-bottom: 184px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.case-studies__title {
+    margin-bottom: 12px;
+    max-width: 1070px;
+}
+
+
+.case-studies__text {
+    margin-bottom: 100px;
+    max-width: 1070px;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 800;
+    color: #114455;
+}
+
+.text {
+    font-size: 28px;
+    line-height: 1.57;
+    color: rgb(50, 50, 50);
 }
