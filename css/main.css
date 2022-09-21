@@ -13,6 +13,10 @@ body {
     font-weight: 500;
 }
 
+.no-scroll {
+    overflow-y: hidden;
+}
+
 .container {
     max-width: 1750px;
     padding: 0 15px;
@@ -169,7 +173,7 @@ body {
 }
 
 .none {
-    display: none;
+    display: none !important;
 }
 
 
@@ -315,4 +319,110 @@ body {
 .footer__socials {
     display: flex;
     column-gap: 26px;
+}
+
+/*Mobile-nav*/
+
+.mobile-nav {
+    background-color: #fff;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    padding-top: 44px;
+    padding-left: 24px;
+    padding-right: 15px;
+    padding-bottom: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.mobile-nav__header {
+    display: flex;
+    justify-content: space-between;
+    /*margin-bottom: 66px;*/
+}
+
+.mobile-nav__logo {
+    max-width: 109px;
+}
+
+.mobile-nav__btn {
+    margin-right: 1px;
+}
+
+.mobile-list {
+    margin-bottom: 60px;
+    font-size: 40px;
+    color: #1F1F1F;
+    font-weight: 800;
+}
+
+.mobile-list a {
+    color: #1F1F1F;
+}
+
+.mobile-list li {}
+
+.mobile-contacts {
+    /*margin-bottom: 80px;*/
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.mobile-contacts a {
+    color: rgb(31, 31, 31, 0.7);
+}
+
+.mobile-contacts__title {
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #1F1F1F;
+
+}
+
+.mobile-contacts__email {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.mobile-contacts__phone {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.mobile-contacts__address {}
+
+.mobile-footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-footer__email {
+    display: block;
+    color: rgb(74, 42, 211, 0.7);
+    margin-bottom: 16px;
+}
+
+.mobile-socials {
+    margin-bottom: 32px;
+}
+
+.mobile-socials img {
+    width: 24px;
+}
+
+.mobile-footer__copyright {
+    font-size: 14px;
+    color: rgb(31, 31, 31, 0.7);
 }
