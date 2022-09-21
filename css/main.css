@@ -20,9 +20,16 @@ body {
 }
 
 .container-right {
+    overflow-x: hidden;
     padding-left: calc((100% - 1750px) / 2 + 15px);
 }
 
+@media(max-width:1749px) {
+    .container-right {
+        padding-left: 15px;
+        overflow-x: hidden;
+    }
+}
 
 /*Button*/
 .btn {
